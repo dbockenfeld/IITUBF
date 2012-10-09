@@ -1,0 +1,38 @@
+header nav {
+	top: 120px;
+	position: relative;
+	height: 39px;
+	background: url(../images/nav.jpg) no-repeat center top;
+	background-color: #3e3e3e;
+}
+
+header nav ul {
+	font-size: 16px;
+	font-weight: bold;
+	margin-left: auto;
+	margin-bottom: 0px;
+	margin-right: auto;
+	margin-top: 0px;
+	padding: 5px 0px 0px;
+	width: 1020px;
+}
+header nav li {
+    display: inline;
+}
+
+header nav ul li a{
+float: left;
+color: white; /*text color*/
+padding: 6px 12px;
+text-decoration: none;
+/*border-right: 1px solid gray;*/
+}
+
+header nav ul li a:visited{
+color: white;
+}
+
+header nav ul li a:hover, header nav ul li .current{
+color: white !important; /*text color of selected and active item*/
+background: #C00;
+}
