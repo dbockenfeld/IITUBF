@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>University Bible Fellowship at IIT</title>
+<link rel='stylesheet' type='text/css' href='../iitubf.css' />
+</head>
+
+<?php
+	include '../dblocal.php';
+
+	$sql_homepage = mysql_query("SELECT * from homepage");
+
+	$homepage_text = mysql_fetch_array($sql_homepage);
+
+	$footer_text = $homepage_text['footnote'];
+
+?>
+<body>
+
+
+<div id='wrap'><div id='bsheaderimg'>
+<div id='headertop'></div>
+<div class='homelink'><a href='http://www.iitubf.org'></a></div></div><div class="indentmenu">
+<ul>
+<li><a href='biblestudy.html?doc_select=all' class='current'>Bible Study</a></li>
+<li><a href='http://www.iit.edu'>Events</a></li>
+<li><a href='/media/media.html'>Media</a></li>
+<li><a href='http://www.iit.edu'>Daily Bread</a></li>
+<li><a href='http://www.iit.edu'>About Us</a></li>
+<li><a href='http://www.iit.edu'>Contact</a></li>
+
+<li><a href='http://www.iit.edu'>Resources</a></li>
+</ul>
+</div>
+
+<?php 
+
+$doc_select=$_GET['doc_select'];
+
+switch ($doc_select) {
+case "all":
+	$sel_all="class='subcurrentpoint'";
+	$sel_messages="class='notcurrentpoint'";
+	$sel_questions="class='notcurrentpoint'";
+	$sel_all_link="class='subcurrentlink'";
+	$sel_messages_link="class='notcurrentlink'";
+	$sel_questions_link="class='notcurrentlink'";
+	break;
+case "messages":
+	$sel_all="class='notcurrentpoint'";
+	$sel_messages="class='subcurrentpoint'";
+	$sel_questions="class='notcurrentpoint'";	
+	$sel_all_link="class='notcurrentlink'";
+	$sel_messages_link="class='subcurrentlink'";
+	$sel_questions_link="class='notcurrentlink'";
+	break;
+case "questions":
+	$sel_all="class='notcurrentpoint'";
+	$sel_messages="class='notcurrentpoint'";
+	$sel_questions="class='subcurrentpoint'";
+	$sel_all_link="class='notcurrentlink'";
+	$sel_messages_link="class='notcurrentlink'";
+	$sel_questions_link="class='subcurrentlink'";
+	break;
+}
+
+
+echo "<div id='submenu'>
+
+<div style='float:left; width:30px;'></div>
+<div ".$sel_all."></div>
+<div style='float:left; width:140px;' ".$sel_all_link."><a href='biblestudy.html?doc_select=all'>All Documents</a></div>
+<div ".$sel_messages."></div>
+<div style='float:left; width:120px;' ".$sel_messages_link."
+><a href='biblestudy.html?doc_select=messages'>Messages</a></div>
+<div ".$sel_questions."></div>
+<div style='float:left; width:120px;' ".$sel_questions_link."
+><a href='biblestudy.html?doc_select=questions'>Questions</a></div>
+</div>
+
+<div id='content'>
+
+<div class='indnt'> </div>
+
+<div style='float:left; width:150px;'>
+<br /><br />
+<p />Sunday Worship Service:
+<br />IIT Chapel - Sundays, 10AM
+
+<br /><br /><br />
+<p />IIT Bible Club:
+<br />MTCC Yellow Room - Wednesdays, 7PM
+
+<br /><br /><br />
+<p />Friday Fellowship:
+<br />IIT Chapel - Fridays, 7PM
+
+</div>
+
+<div id='articles'>
+
+<br />";
+
+
+switch ($doc_select) {
+case "all":
+	include 'all_docs.php';
+	break;
+case "messages":
+	include 'messages.php';
+	break;
+case "questions":
+	include 'questions.php';
+	break;
+}
+
+
+?>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<div id='footdt' ></div>
+<div id='foot' style='padding-top:4px;'>
+<div class='indnt'></div><span style='color:white;'>
+<?php echo $footer_text; ?>
+</span>
+</div>
+
+
+</body>
+</html>

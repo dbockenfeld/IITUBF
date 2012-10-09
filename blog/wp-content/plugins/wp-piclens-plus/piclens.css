@@ -1,0 +1,32 @@
+div#rotator
+{
+	border: none;
+	width: 90%;
+	height: 68%;
+	text-align: center;
+	margin: 0px 5px 5px 5px;
+	padding: 5px;
+	position: relative;
+	left: -5px;
+	display: block;
+	overflow: hidden;
+}
+
+div#rotator img
+{
+	border: solid 1px black;
+	padding: 2px;
+	margin: 0px;
+	display: block;
+	position: absolute;
+	top: -100000px;
+}
+
+div#noImages
+{
+	border: dotted 1px gray;
+	text-align: center;
+	vertical-align: 50%;
+	margin: 0px;
+	display: block;
+}

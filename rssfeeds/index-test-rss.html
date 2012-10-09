@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="keywords" content="ubf,university bible fellowship, IIT, university,bible,fellowship,chicago,RSS, campus,mission,world,evangelical,student,organization" />
+<META NAME="description" content="The University Bible Fellowship(UBF) is an international evangelical student organization with emphasis on world mission.">
+<title>University Bible Fellowship at IIT</title>
+<link rel='stylesheet' type='text/css' href='../iitubf.css' />
+</head>
+
+<?php
+	include '../db.php';
+
+	include '../sidebarsql.php';
+?>
+<body>
+
+<div id='wrap'><div id='headerimg'>
+<div id='headertop'></div>
+<div class='homelink'><a href='http://www.iitubf.org'></a></div></div>
+
+<?php
+
+	include '../menu.php';
+
+?>
+
+<div id='submenu'>
+
+</div>
+
+<div id='ws'>
+
+<div class='wsi'>
+<div class='indnt'> </div>
+<span style='font-weight:bold; font-size:20px;'>Worship Service</span>
+<br />Sundays 10am<br />
+HUB Ballroom (Temporary Summer Location)<br /><br />
+<span style='font-weight:bold;'><?php echo $ws_text; ?></span>
+<br />
+<span style='font-size:10px;'><?php echo $message_description; ?></span>
+</div>
+
+
+<div class='wsmimg'>
+<div class='indnt'></div>
+<a href='biblestudy/messages/
+<?php echo $message_file; ?>'>
+<img src='images/Document.png' style='border:0px;' class='docs' /></a>
+</div>
+
+<div class='wsm'>
+<div class='indnt'></div>
+<a style='color:blue; font-weight:bold; text-decoration:underline;' href='biblestudy/messages/
+<?php echo $message_file; ?>'>
+<?php echo $message_title; ?></a> <br />
+<?php echo $message_short_description; ?>
+<br /><span style='font-size:x-small; font-weight:bold; color: brown;'>Category: 
+<a style='font-size:x-small; font-weight:bold; color:brown; ' href='bible_study/'><?php echo $message_category; ?></a>
+| Posted 
+<?php echo date('m-d-Y',strtotime($message_date)); ?> by <?php echo $message_author; ?></span>
+</div>
+
+
+<div class='wsqimg'>
+<div class='indnt'> </div>
+<a href='biblestudy/questions/
+<?php echo $question_file; ?>'>
+<img src='images/Document.png' style='border:0px;' class='docs' /></a>
+</div>
+
+<div class='wsq'>
+<div class='indnt'> </div>
+<a style='color:blue; font-weight:bold; text-decoration:underline;' href='biblestudy/questions/
+<?php echo $question_file; ?>'>
+<?php echo $question_title; ?></a> <br />
+<?php echo $question_short_description; ?>
+<br /><span style='font-size:x-small; font-weight:bold; color: brown;'>Category: 
+<a style='font-size:x-small; font-weight:bold; color:brown; ' href='bible_study/'><?php echo $question_category; ?></a>
+| Posted 
+<?php echo date('m-d-Y',strtotime($question_date)); ?> by <?php echo $question_author; ?></span>
+</div>
+
+
+
+</div>
+
+
+<div id='flashb'><div id='flash'>
+	<object width="598" height="248" align="middle">
+<embed src="./flash/iitubf.swf" loop="false" menu="true" quality="high" bgcolor="#56D1DE" width="598" height="248" name="iitubfdefflash" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+	</object>
+</div></div>
+<div id='bc'>
+<div id='bctop'>
+<div style='float:right; width:250px; height:20px; background-color:#cc0033; padding-right:5px;'></div>
+<div style='float: right; width:1px; border-style:solid; border-width:20px 0 0 20px; border-color:#cc0033 transparent transparent transparent;
+	/*set an unused color to be index color*/
+	_border-color:#cc0033 tomato tomato tomato; /*For IE6-*/
+	
+	/*then remove this indexed color*/
+	_filter:chroma(color=tomato);/*For IE6-*/
+'> </div>
+
+<div id='topupd'>
+<div class='indnt'> </div></div>
+
+
+<div class='upds'>
+<div class='indnt'> </div>
+...Pardon our dust!!!
+<br />
+<br />
+<br />
+Our website is currently undergoing major changes and updates - many of the detail pages are already updated.  Please have a look around.  This front page will be updated by Sept 2009, and will bring you all the latest updates from the site.  Please check back soon and often!
+
+</div>
+
+
+<div class='updimg'>
+</div>
+
+
+<div class='upds'>
+<div class='indnt'> </div>
+
+</div>
+
+
+<div class='updimg'>
+</div>
+
+<div class='upds'>
+
+
+<?php 
+echo "rssfeed";
+include('/rss2html.php?XMLFILE=http://www.iitubf.org/blog/?feed=rss2&TEMPLATE=/sample-template.html&MAXITEMS=2'); ?>
+
+
+
+</div>
+
+
+<div class='updimg'>
+</div>
+
+</div>
+
+<?php
+
+echo $bottomlinks;
+
+?>
+
+</div>
+
+
+
+
+<div id='spec'>
+	<div id='nbc'>
+		<div class='indnt'>
+		</div>
+		<br /><span style='font-weight:bold;'>Prayer Topics/Special Announcements</span>
+		<br /><span style='font-size:10px;'>Updated: <?php echo date('m-d-Y', strtotime($ws_week)); ?></span>
+		<br />
+		<?php echo $prayer_topics; ?>
+	</div>
+	<div id='bc2'>
+		<div style='position: relative; top: 75px; left: 165px; color: white; font-weight: bold; font:86% Verdana,Tahoma,Arial,sans-serif'><!--in IIT's MTCC Blue Room @ 7pm -->
+		</div>
+		<a href='http://www.iit.edu/~iitbible'> </a>
+	</div>
+	<div id='bc3'>
+		<div class='indnt'>
+		</div>
+		<!--Meeting this week: <?php echo $bc_day.", ".date('m-d-Y', strtotime($bc_week)); ?><br /><br />
+		<?php echo $iitbc_announce; ?>
+		-->
+		Have a great summer!  See you this Fall!
+	</div>
+</div>
+
+
+
+<div id='footdt' ></div>
+<div id='foot' style='padding-top:4px;'>
+<div class='indnt'></div><span style='color:white;'>
+<?php echo $footer_text; ?>
+</span>
+</div>
+
+
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5732686-1");
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+#RemoveHandler .html .htm
+#AddType application/x-httpd-php .php .htm .html
+AddHandler application/x-httpd-php5 .php .htm .html
+Action php5-cgi /php5/php5.cgi
+#DirectoryIndex biblestudy.html

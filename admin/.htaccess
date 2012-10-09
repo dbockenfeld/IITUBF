@@ -1,0 +1,14 @@
+AuthUserFile /home/iitubf/.htpasswd
+AuthType Basic
+AuthName "IITUBF Admin Login"
+
+IndexIgnore */*
+
+<LIMIT GET POST>
+require valid-user
+</LIMIT> 
+
+<files ".htaccess">
+order allow,deny
+deny from all
+</files> 

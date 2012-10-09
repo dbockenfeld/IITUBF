@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>University Bible Fellowship at IIT</title>
+<link rel='stylesheet' type='text/css' href='../iitubf.css' />
+<link rel="stylesheet" type="text/css" href="../media/gallery.css" media="all" />
+<script type='text/javascript' src='selectevents.js'></script>
+</head>
+
+<?php
+	include '../db.php';
+	include '../sidebarsql.php';
+
+?>
+
+<body>
+
+
+<div id='wrap'>
+
+<div id='evheaderimg'>
+<div id='headertop'></div>
+<div class='homelink'><a href='http://www.iitubf.org'></a></div></div>
+
+
+
+<?php
+
+	include '../menu.php';
+?>
+
+
+
+<div id='submenu'>
+
+</div>
+
+<div id='wrap_framedivs'>
+
+<?php
+
+   include '../ws_info.php';
+	$sql_event_type_query = "select event_type_id, event_type from event_type order by event_type_id";
+
+	$sql_event_type = mysql_query($sql_event_type_query);
+	if (!$sql_event_type) {
+    die('Invalid query: ' . mysql_error());
+}
+
+	$num_event_types = mysql_num_rows($sql_event_type);
+?>
+
+
+
+<div id='framedivb'>
+	<img src='../images/events-sbhdr.jpg' />
+	<div id='framediv'>
+
+	<!--<h1>Events</h1>-->
+	<br />
+	<b>Special Events - You're Invited!!  See below for details.</b>
+	<br />
+	<br />
+	<br />Filter Criteria:
+	<br />
+
+Date: <select name='filter_dates' onchange='show_event(this.value)'>
+<option value='Reset'>Select/Reset</option>
+<option value='S109'>Jan-June 2009</option>
+<option value='S209'>July-Dec 2009</option>
+</select>
+
+<?php
+
+	echo " or Type: <select name='filter_types' onchange='show_event(this.value)'>
+<option value='Reset'>Select/Reset</option>";
+
+	for ($j=0; $j<$num_event_types; $j++) {
+		$event_type_text = mysql_fetch_array($sql_event_type);	
+
+	echo "<option value='".$event_type_text['event_type_id']."'>".$event_type_text['event_type']."</option>";
+
+	}
+
+	echo "</select>
+	<br />
+	<br />
+	<br />";
+
+?>
+
+	<div style='padding-left:25px;' id='event_frame'>
+
+
+
+<?php
+
+		include 'get_events.php';
+
+?>
+
+	</div>
+
+	</div>
+
+
+
+</div>
+
+
+
+<?php
+
+  include '../prayer_info.php';
+
+?>
+
+
+</div>
+
+<div id='footdt' ></div>
+<div id='foot' style='padding-top:4px;'>
+<div class='indnt'></div><span style='color:white;'>
+<?php echo $footer_text; ?>
+</span>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5732686-1");
+pageTracker._trackPageview();
+</script> 
+
+</body>
+</html>
