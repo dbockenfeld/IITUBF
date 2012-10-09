@@ -1,0 +1,1 @@
+This directory must exist and be writable for the PicasaWeb Widget to work. The contents of this directory is a cache of your thumbnail images, since Google doesn't seem to allow direct links.

@@ -1,0 +1,118 @@
+html, body {
+	padding: 0px;
+	margin: 0px;
+	font-family: Helvetica, Arial, sans-serif;
+/*
+	font-size: 15px;
+	line-height: 20px;
+*/
+}
+
+body {
+	/*
+background-image: linear-gradient(bottom, rgb(63,63,63) 0%, rgb(255,255,255) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(63,63,63) 0%, rgb(255,255,255) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(63,63,63) 0%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(63,63,63) 0%, rgb(255,255,255) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(63,63,63) 0%, rgb(255,255,255) 100%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(63,63,63)),
+		color-stop(1, rgb(255,255,255))
+	);
+*/
+	
+	background: url(../images/background.jpg) repeat-x;
+	background-color: #656565;
+	padding: 0px;
+	margin: 0px;
+}
+
+header {
+	min-width: 1020px;
+	margin: 0px;
+	height: 159px;
+	width: 100%;
+	background: url(../images/header.jpg) no-repeat center top;
+	background-color: #4f0101;
+}
+
+header h1 {
+	position: absolute;
+	left: -9000px;
+	text-overflow: hidden;
+	width: 0px;
+	height: 0px;
+}
+
+header nav {
+	top: 120px;
+	position: relative;
+	height: 39px;
+	background: url(../images/nav.jpg) no-repeat center top;
+	background-color: #3e3e3e;
+}
+
+header nav ul {
+	font-size: 16px;
+	font-weight: bold;
+	margin-left: auto;
+	margin-bottom: 0px;
+	margin-right: auto;
+	margin-top: 0px;
+	padding: 5px 0px 0px;
+	width: 1020px;
+}
+header nav li {
+    display: inline;
+}
+
+header nav ul li a{
+float: left;
+color: white; /*text color*/
+padding: 6px 12px;
+text-decoration: none;
+/*border-right: 1px solid gray;*/
+}
+
+header nav ul li a:visited{
+color: white;
+}
+
+header nav ul li a:hover, header nav ul li .current{
+color: white !important; /*text color of selected and active item*/
+background: #C00;
+}
+
+footer {
+	height: 120px;
+	background: url(../images/footer.png) no-repeat center top #666;
+}
+
+footer #footer_text {
+	position: absolute;
+	left: -9000px;
+	text-overflow: hidden;
+	width: 0px;
+	height: 0px;
+}
+
+#main {
+	background-color: white;
+	min-height: 768px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 1020px;
+}
+
+#main header {
+	background-color: transparent;
+	height:auto;
+}
+
+#contentc, #contentb, #biblestudy_frame {
+	height: auto;
+}

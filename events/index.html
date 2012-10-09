@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="keywords" content="ubf,university bible fellowship, IIT, church, jesus,chicago" />
+<meta name="description" content="IIT UBF is a non-denominational church that is dedicated to share Jesus in the Bronzeville and Bridgeport neighborhoods of Chicago.">
+<title>University Bible Fellowship at IIT</title>
+<link rel='stylesheet' type='text/css' href='../iitubf.css' />
+<link rel="stylesheet" type="text/css" href="../media/gallery.css" media="all" />
+<script type='text/javascript' src='selectbiblestudy.js'></script>
+
+</head>
+
+<?php
+	$base_dir = '../';
+    
+    include $base_dir.'db.php';
+    
+	include $base_dir.'sidebarsql.php';
+?>
+<body>
+
+<div id='wrap'><div id='headerimg'>
+<div class='homelink'><a href='http://www.iitubf.org'></a></div>
+</div>
+
+<?php
+
+	include $base_dir.'menu.php';
+
+?>
+
+<div id='submenu'>
+
+</div>
+
+<?php
+
+	include $base_dir.'side.php';
+
+	$sql_event_type_query = "select event_type_id, event_type from event_type order by event_type_id";
+
+	$sql_event_type = mysql_query($sql_event_type_query);
+	if (!$sql_event_type) {
+    die('Invalid query: ' . mysql_error());
+}
+
+	$num_event_types = mysql_num_rows($sql_event_type);
+
+?>
+
+
+<div id='content'>
+
+	<div id='contentb'>
+		<img src='../images/events-sbhdr.jpg' />
+		<div id='contentc'>
+
+			<!--Filter Criteria:
+			<br />
+
+            Date: <select name='filter_dates' onchange='show_event(this.value)'>
+            <option value='Reset'>Select/Reset</option>
+            <option value='S109'>Jan-June 2009</option>
+            <option value='S209'>July-Dec 2009</option>
+            </select>
+            
+            <?php
+
+                echo " or Type: <select name='filter_types' onchange='show_event(this.value)'>
+	            <option value='Reset'>Select/Reset</option>";
+            
+                for ($j=0; $j<$num_event_types; $j++) {
+                    $event_type_text = mysql_fetch_array($sql_event_type);	
+            
+                echo "<option value='".$event_type_text['event_type_id']."'>".$event_type_text['event_type']."</option>";
+            
+                }
+            
+                echo "</select>
+                <br />";
+            
+            ?>-->
+			<br/>
+			<div style='padding-left:25px;' id='event_frame'>
+			<?php
+				include 'get_events.php';
+
+			?>
+
+			</div>
+
+		</div>
+
+	</div>
+</div>
+
+
+
+
+
+<div id='foot'>
+	<span style='color:white;'>
+		<?php echo $footer_text; ?>
+	</span>
+</div>
+
+
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5732686-1");
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>

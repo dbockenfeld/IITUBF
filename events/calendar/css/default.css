@@ -1,0 +1,295 @@
+<STYLE TYPE="text/css">
+<!--
+/**************************************************************
+********* Formatting For Month Table and Text *****************
+**************************************************************/
+
+
+
+
+
+//my css for iitubf
+
+body
+{
+/*text-align:center;
+font-family: arial, helvetica;
+font-size:9pt;
+background-color: #dddddd;*/
+}
+
+
+/*DIV TAGS*/
+/*
+body
+{
+text-align: center;
+}
+
+div.container
+{
+float: left;
+width:400px;
+line-height:150%;
+text-align:left;
+background-image:url(images/cont_bg.jpg);
+background-repeat: repeat-x;
+}
+
+
+ 
+  
+/* Header */
+
+#header2 {height:20px;}
+
+#header {margin:10px 0 0;}
+
+#header h1 {background-color:inherit; color:#555; float:left; font-size:2.5em; letter-spacing:-1px; margin:0 0 10px; width:190px;}
+
+#header h1 a {background-color:inherit; color:#555; text-decoration:none;}
+
+#header p a {background-color:inherit; color:#000; text-decoration:none;}
+
+#header p {background-color:inherit; color:#000; float:left; font-size:12px; text-align:left; width:560px; /*line-height:1.3em; margin:15px 0 0; */ margin:0 0 20px; }
+
+
+/* Body */ 
+
+ body {background:#f4f4f4 url(../../../images/bg.jpg) top center repeat-y; color:#303030; font:76% Verdana,Tahoma,Arial,sans-serif;} 
+
+ * {margin:0; padding:0;} 
+
+#wrap {/*background-color:#fff;*/ background-color: transparent; color:#333; margin:0 auto; width:960px; } 
+
+#headerimg {width:960px; height:134px; background:url(../../../images/main-hdre.jpg);}
+#bsheaderimg {width:960px; height:134px; background:url(../../../images/bbls-hdre.jpg);}
+#mdheaderimg {width:960px; height:134px; background:url(../../../images/phto-hdre.jpg);}
+#evheaderimg {width:960px; height:134px; background:url(../../../images/evnt-hdre.jpg);}
+
+#headertop {width:960px; height:67px;}
+div.homelink {width:200px; height:67px; background-color:transparent; }
+div.homelink a {width:200px; height:67px; display: block; background-color:transparent; }
+
+#menu {background: url(../../../images/cont_bg2.jpg) repeat-x; width:958px; height:40px; border:1px solid;}
+
+#submenu{clear: both; background-color:#cc0033; width:958px; height:16px; border: 1px solid #cc0033; color: white;}
+#submenu a {color: white;}
+
+#ws { float:left; width:352px; height:275px; /*background: url(images/cont_bg3.jpg) repeat-y;*/ background: url(images/carrchapelint3.jpg) no-repeat; border:1px solid gray;}
+
+div.wsi {float:left; width:352px; height:110px;}
+
+div.wsqimg {float:left; width: 60px; height:65px;}
+div.wsmimg {float:left; width: 60px; height:90px;}
+
+div.wsm {float: left; width:250px; height:90px;}
+div.wsq {float: left; width:250px; height:65px;}
+
+
+img.docs {width: 28px; height: 28px; vertical-align: top;}
+img.upds {width: 72px; height: 72px; vertical-align: top;}
+
+#spec {float:left; width:352px; height:344px; background: url(images/cont_bg3.jpg) repeat-y; border-left: 1px solid gray;  border-right: 1px solid gray; border-bottom: 1px solid gray;}
+
+
+#flashb {float:right; width:600px; height:250px; border: solid; border-width: 0 3px 3px 3px; border-color: #cc0033;background-color:black; font:white;}
+
+#flash {float:left; width:598px; height:248px; border: 1px solid gray; background-color:black; font:white;}
+
+
+#bc {float:right; width:605px; height:418px; border-top: 1px solid gray; border-right: 1px solid gray; border-bottom: 1px solid gray; border-top: 0; background: url(images/cont_bg.jpg) repeat-x;}
+#bctop {height:393px;}
+#botlinks {height:25px; text-align: center;}
+
+
+#topupd {float:right; width:605px; height:14px;}
+div.upds {float:right; width:500px; height:115px;}
+div.updimg {float:right; width:80px; height:115px;}
+
+
+#nbc {width:352px; height:163px; border-bottom: 1px solid gray;}
+#bc2 {width:352px; height:106px; background: url(images/iitbc-gbs-top.jpg);}
+#bc2 a {width:200px; height:106px; display:block; background-color:transparent;}
+#bc3 {width:352px; height:124px; background: url(images/iitbc-gbs-body.jpg); color:white;}
+
+div.indnt {float: left; width: 10px; height: 100%; background-color: transparent;}
+
+/*
+#bc {float:right; width:605px; height:264px; border-top: 1px solid gray; border-right: 1px solid gray; border-bottom: 1px solid gray; background: url(images/cont_bg4.jpg) repeat-y; background-position:right;}
+*/
+
+#footdt{clear: both; background-color:#cc0033; width:958px; height:5px; font-size:5px; border: solid; border-width: 0 1px 1px 1px; border-color: gray;}
+
+#foot{background-color:black; background: url(../../../images/indentbg9.jpg) repeat-x;  width:958px; height:25px; border: solid; border-width: 0 1px 1px 1px; border-color: black gray gray gray;}
+
+#spacer{float:left; width:25px;}
+
+
+
+
+
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+.indentmenu{
+font: bold 13px Arial;
+width: 100%; /*leave this value as is in most cases*/
+}
+
+.indentmenu ul{
+margin: 0;
+padding: 0;
+float: left;
+width: 100%; /*width of menu*/
+border: 1px solid gray;
+border-width: 1px 0;
+background: black url(../../../images/indentbg6.jpg) center center repeat-x;
+}
+
+.indentmenu ul li{
+display: inline;
+}
+
+.indentmenu ul li a{
+float: left;
+color: white; /*text color*/
+padding: 6px 12px;
+text-decoration: none;
+border-right: 1px solid gray;
+}
+
+.indentmenu ul li a:visited{
+color: white;
+}
+
+.indentmenu ul li a:hover, .indentmenu ul li .current{
+color: white !important; /*text color of selected and active item*/
+padding-top: 7px; /*shift text down 1px for selected and active item*/
+padding-bottom: 5px; /*shift text down 1px for selected and active item*/
+background: black url(../../../images/indentbg8.jpg) center center repeat-x;
+}
+
+div.subcurrentpoint {
+float:left; font-size: 0px; line-height: 0%; width: 5px; 
+border-style:solid; border-width:7px 0 7px 7px; border-color:#cc0033 #cc0033 #cc0033 black;
+}
+
+
+
+div.notcurrentpoint {
+float:left; font-size: 0px; line-height: 0%; width: 5px; 
+border-style:solid; border-width:7px 0 7px 7px; border-color:#cc0033 #cc0033 #cc0033 #cc0033;
+}
+
+div.subcurrentlink a{
+text-decoration: underline; color: white; font-size:11px;
+}
+
+div.notcurrentlink a {
+color: white; font-size:11px;
+text-decoration: none;
+}
+
+div.notcurrentlink a:hover {
+color: white; font-size:11px;
+text-decoration: underline;
+}
+
+#content {width: 958px; height:100%; border: 1px solid gray; background: url(../../../images/cont_bg3.jpg) repeat-y;}
+#content2 {float:right; width: 100px; height:100%; background: url(../../../images/cont_bg4.jpg) repeat-y;}
+
+#articles { float: right; width:775px; height:100%; border-left: 1px solid gray; 
+background: url(images/cont_bg.jpg) repeat-x; text-align: left; line-height: 1.5; padding-left: 10px;}
+
+
+
+
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+.gallerycontainer{
+position: relative;
+/*Add a height attribute and set to largest image's height to prevent overlaying*/
+}
+
+.thumbnail img{
+border: 1px solid white;
+margin: 0 5px 5px 0;
+}
+
+.thumbnail:hover{
+background-color: transparent;
+}
+
+.thumbnail:hover img{
+border: 1px solid blue;
+}
+
+.thumbnail span{ /*CSS for enlarged image*/
+position: absolute;
+background-color: lightyellow;
+padding: 5px;
+left: -1000px;
+border: 1px dashed gray;
+visibility: hidden;
+color: black;
+text-decoration: none;
+}
+
+.thumbnail span img{ /*CSS for enlarged image*/
+border-width: 0;
+padding: 2px;
+}
+
+.thumbnail:hover span{ /*CSS for enlarged image*/
+visibility: visible;
+top: 0;
+left: 230px; /*position where enlarged image should offset horizontally */
+z-index: 50;
+}
+
+
+
+
+A		{ font-family:arial, helvetica; color:#00F; text-decoration:underline }
+SPAN	{ font-family:arial, helvetica }
+TD     	{ font-family:arial, helvetica }
+/* mm BODY	{ background-color:#FFF } */
+
+/**** month and year header at top of calendar ****/
+.date_header			{ font-size:16px; font-family:arial, helvetica; font-weight:bold }
+
+/**** color and size of calendar cells.  ****/
+.day_cell				{ background-color:#EDECD8; height:80; width: 95; }
+.empty_day_cell			{ background-color:#EEEEEE; height:80; width: 95; }
+.today_cell				{ background-color:#F5F4ED; height:80; width: 95; }
+
+/**** day number in upper left corner of each cell ****/
+.day_number				{ font-size:10px; font-family:verdana, arial, helvetica; color:#000 }
+
+/**** title_txt is the text for each post on main page ****/
+.title_txt				{ font-size:10px; font-family:verdana, arial, helvetica; color:#000 }
+.title_txt A:link		{ color:#00F; text-decoration:underline }
+.title_txt A:active		{ color:#00F; text-decoration:underline }
+.title_txt A:visited	{ color:#00F; text-decoration:underline }
+.title_txt A:hover		{ color:#00F; text-decoration:underline }
+
+/**** time line under title text when event time given ****/
+.time_str				{ font-size:9px; font-family:arial, helvetica }
+
+/**** column headers or days of the week ****/
+.column_header			{ background-color:#2663E2; font-size:12px; font-family:arial, helvetica; color:#FFFFFF; font-weight:bold }
+
+/**** footprint text ****/
+.footprint				{ font-size:10px; font-family:verdana, arial, helvetica; color:#000; font-weight:bold; }
+.footprint A			{ font-size:10px; font-family:verdana, arial, helvetica; color:#00F; font-weight:bold; }
+
+
+// end hiding -->
+
+
+
+
+
+</STYLE>

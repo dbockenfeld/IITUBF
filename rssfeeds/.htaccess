@@ -1,0 +1,3 @@
+AddHandler application/x-httpd-php5 .php .htm .html
+#AddHandler php5-cgi .php .html
+Action php5-cgi /php5/php5.cgi
